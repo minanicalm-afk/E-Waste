@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Josachi green — taken from the Stitch homepage (primary #00653d, hover #0d8050,
+   warm copper secondary for company/bulk accents). White/off-white surfaces stay primary. */
+:root, [data-theme="green"] {
+  --bg: #faf8ff; --panel: #f2f3ff; --card: #ffffff; --line: #d5dce8;
+  --text: #131b2e; --muted: #3e4941; --faint: #4d5c54;
+  --brand: #00653d; --brand2: #0d8050; --accent: #904d00; --accent-light: #fe932c;
+}
+[data-theme="slate"] {
+  --bg: #ffffff; --panel: #f3f5f8; --card: #ffffff; --line: #e2e6ec;
+  --text: #161a22; --muted: #5d6774; --faint: #8a94a3;
+  --brand: #4f7ab5; --brand2: #6f97c9; --accent: #718093; --accent-light: #556270;
+}
+[data-theme="copper"] {
+  --bg: #ffffff; --panel: #f7f3ef; --card: #ffffff; --line: #e7dfd7;
+  --text: #1d1917; --muted: #6b6259; --faint: #9a9085;
+  --brand: #a06a3a; --brand2: #b98a58; --accent: #857468; --accent-light: #6e5d4f;
+}
+[data-theme="teal"] {
+  --bg: #ffffff; --panel: #f0f5f4; --card: #ffffff; --line: #dde7e5;
+  --text: #151d1d; --muted: #5b6a69; --faint: #8b9a98;
+  --brand: #47857e; --brand2: #639e97; --accent: #708080; --accent-light: #576b6b;
+}
+
+@theme inline {
+  --color-ink: var(--bg);
+  --color-panel: var(--panel);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-txt: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-brand: var(--brand);
+  --color-brand2: var(--brand2);
+  --color-accent: var(--accent);
+  --color-alight: var(--accent-light);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-geist-sans), system-ui, sans-serif; transition: background-color .3s ease; }
+::selection { background: var(--brand); color: white; }
+input, select, textarea { color-scheme: light; }
+:focus-visible { outline: 2px solid #131b2e; outline-offset: 3px; }
